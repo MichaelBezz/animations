@@ -10,7 +10,7 @@ $color-transparent:                 rgba(255, 255, 255, 0);
 // Project palette
 // для нейминга цветов используем https://www.htmlcsscolor.com/hex/334482
 
-$color-night-rider:               #303030;
+$color-night-rider:                 #303030;
 
 // Gradient
 
@@ -18,15 +18,10 @@ $black-to-right:                    linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0
 
 // Typography
 // ---------------------------------
+$ff-inter:                          "Inter", "Arial", sans-serif;
 
 // переменная используемая в html для подключения скейлинга
 $fz-default:                        16px;
-
-// у некоторых шрифтов в ios возникают проблемы с символом рубля
-// https://www.artlebedev.ru/kovodstvo/sections/159/#13
-$ff-rouble:                         "Rouble", "Arial", sans-serif;
-
-$ff-placeholder:                    "Placeholder", "Arial", sans-serif;
 
 // Animation
 // ---------------------------------
@@ -36,6 +31,7 @@ $trans-default:                     0.3s $tf-default;
 
 // если требуется изинг отличный от $tf-default, то переменную называем не цифрой
 $trans-modal:                       0.6s cubic-bezier(0.55, 0, 0.1, 1);
+$trans-menu:                        0.7s cubic-bezier(0.55, 0, 0.44, .99);
 
 $trans-600:                         0.6s $tf-default;
 
@@ -55,3 +51,8 @@ $vp-1920:                           1920px;
 
 $retina-dpi:                        144dpi;
 $retina-dppx:                       1.5dppx;
+
+// Z-index
+// ---------------------------------
+$z-index-header:                    100;
+$z-index-header-top:                2;
