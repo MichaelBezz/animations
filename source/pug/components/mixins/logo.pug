@@ -1,0 +1,8 @@
+mixin logo(currentUrl)
+  .logo&attributes(attributes)
+    if(currentUrl === "index.html")
+      span.logo__wrapper
+        +icon("logo", 181, 33)
+    else
+      a.logo__wrapper(href="index.html", aria-label="Переход на главную.")
+        +icon("logo", 181, 33)
