@@ -1,1 +1,21 @@
-.link {}
+.link {
+  display: block;
+
+  &--big {
+    font-size: 50px;
+    line-height: calc(60 / 50);
+
+    @include vp-767 {
+      font-size: 32px;
+      line-height: calc(40 / 32);
+    }
+  }
+
+  &--white {
+    color: $color-default-white;
+  }
+
+  &.is-active {
+    opacity: 0.6;
+  }
+}
