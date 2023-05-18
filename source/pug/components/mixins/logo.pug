@@ -1,8 +1,8 @@
 mixin logo(currentUrl)
   .logo&attributes(attributes)
     if(currentUrl === "index.html")
-      span.logo__wrapper
+      span
         +icon("logo", 181, 33)
     else
-      +link({href: "index.html"})(aria-label="Переход на главную.").logo__wrapper
+      +link({href: "index.html"})(aria-label="Переход на главную.")
         +icon("logo", 181, 33)
