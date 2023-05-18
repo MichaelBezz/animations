@@ -7,6 +7,7 @@ mixin navigation(navigationLinks, currentUrl)
             - const activeState = currentUrl === link.href
             li.navigation__item
               if(activeState)
-                span.navigation__link.is-active=link.text
+                span.link.link--big.link--white.navigation__link.is-active=link.text
               else
-                +link({href: link.href, text: link.text}).navigation__link
+                +link({href: link.href}).link--big.link--white.navigation__link
+                  span=link.text

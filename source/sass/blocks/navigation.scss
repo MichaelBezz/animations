@@ -1,7 +1,86 @@
 .navigation {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  padding-top: var(--header-height);
+  background-color: $color-night-rider;
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  transition: clip-path $trans-menu;
+  pointer-events: none;
+
+  &.is-active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 110%);
+    pointer-events: all;
+
+    .navigation__item {
+      &:first-child .navigation__link {
+        transition-delay: 0.33s;
+      }
+
+      &:nth-child(2) .navigation__link {
+        transition-delay: 0.41s;
+      }
+
+      &:nth-child(3) .navigation__link {
+        transition-delay: 0.49s;
+      }
+
+      &:nth-child(4) .navigation__link {
+        transition-delay: 0.57s;
+      }
+
+      .navigation__link {
+        transform: translate3d(0, 0, 0);
+        transition-delay: 0.65s;
+      }
+    }
+  }
+
+  .container {
+    height: 100%;
+  }
+
+  &__wrapper {
+    height: 100%;
+    width: 100%;
+    padding: 70px 0;
+
+    @include vp-767 {
+      padding: 35px 0;
+    }
+  }
+
   &__list {
+    display: flex;
+    flex-direction: column;
     margin: 0;
     padding: 0;
     list-style: none;
+  }
+
+  &__item {
+    overflow: hidden;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 35px;
+  }
+
+  &__link {
+    width: fit-content;
+    transform: translate3d(0, 110%, 0);
+    transition: transform $trans-400;
+
+    span {
+      display: block;
+    }
+
+    @include hover-focus {
+      &:not(.is-active) span {
+        transform: translate3d(30px, 0, 0);
+        transition: transform $trans-400;
+      }
+    }
   }
 }
