@@ -1,0 +1,12 @@
+mixin navigation(navigationLinks, currentUrl)
+  nav.navigation&attributes(attributes)
+    .container
+      .navigation__wrapper
+        ul.navigation__list
+          each link in navigationLinks
+            - const activeState = currentUrl === link.href
+            li.navigation__item
+              if(activeState)
+                span.navigation__link.is-active=link.text
+              else
+                +link({href: link.href, text: link.text}).navigation__link
