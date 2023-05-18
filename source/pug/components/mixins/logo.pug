@@ -4,5 +4,5 @@ mixin logo(currentUrl)
       span.logo__wrapper
         +icon("logo", 181, 33)
     else
-      a.logo__wrapper(href="index.html", aria-label="Переход на главную.")
+      +link({href: "index.html"})(aria-label="Переход на главную.").logo__wrapper
         +icon("logo", 181, 33)
