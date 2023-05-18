@@ -1,0 +1,8 @@
+mixin link(options = {})
+  - const href = options.href;
+  - const text = options.text || "";
+  - const target = options.isExternal ? "_blank" : false;
+  - const rel = options.isExternal ? "nofollow noopener noreferrer" : false;
+
+  a.link(href=href, target=target, rel=rel)&attributes(attributes)!=text
+    block
