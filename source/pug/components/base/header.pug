@@ -26,5 +26,5 @@ mixin header(headerMods, currentUrl)
   header.header(class=headerMods)
     .container
       +logo(currentUrl).header__logo
-      +button()(aria-label="Переключатель отображения меню.", aria-pressed="false").header__toggle
-    +navigation(navigationLinks, currentUrl).header__navigation
+      +button()(aria-label="Переключатель отображения меню.", aria-pressed="false", data-menu="toggle").button--toggle.header__toggle
+    +navigation(navigationLinks, currentUrl)(data-menu="navigation").header__navigation
