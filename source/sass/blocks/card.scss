@@ -1,0 +1,13 @@
+.card {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  min-height: 115px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: rgba($color-default-white, 0.6);
+
+  &__title {
+    text-align: right;
+  }
+}
