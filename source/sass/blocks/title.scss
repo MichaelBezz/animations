@@ -1,0 +1,47 @@
+.title {
+  margin: 0;
+  color: $color-night-rider;
+
+  &--h1 {
+    font-size: 80px;
+    line-height: calc(80 / 80);
+    font-weight: 500;
+
+    @include vp-1023 {
+      font-size: 60px;
+      line-height: calc(60 / 60);
+    }
+
+    @include vp-767 {
+      font-size: 45px;
+      line-height: calc(50 / 45);
+    }
+  }
+
+  &--h2 {
+    font-size: 45px;
+    line-height: calc(54 / 42);
+    font-weight: 400;
+
+    @include vp-767 {
+      font-size: 34px;
+      line-height: calc(42 / 34);
+    }
+  }
+
+  &--h3 {
+    font-size: 24px;
+    line-height: calc(30 / 24);
+    font-weight: 400;
+
+    @include vp-1023 {
+      font-size: 22px;
+      line-height: calc(28 / 22);
+    }
+
+    @include vp-767 {
+      font-size: 16px;
+      line-height: calc(20 / 16);
+    }
+  }
+}
