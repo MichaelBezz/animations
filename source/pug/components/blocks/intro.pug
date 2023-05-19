@@ -1,10 +1,40 @@
 mixin intro()
-  .intro
-    //- вставлять блоки во внешний контейнер неверно
-    //- все блоки содержат в себе container без доп класса tutorial__wrapper
-    .container
-      p(style="margin-top: 40px;") Текст&nbsp;с&nbsp;мнемониками
+  -
+    const introCards = [
+      {
+        href: "#menu",
+        text: "Меню"
+      },
+      {
+        href: "#loader",
+        text: "Лоадер"
+      },
+      {
+        href: "#first-screen",
+        text: "Сборка первого экрана"
+      },
+      {
+        href: "#show-on-scroll",
+        text: "Появление блоков"
+      },
+      {
+        href: "#parallax",
+        text: "Параллакс"
+      },
+      {
+        href: "#scroll-slider",
+        text: "Слайдер по скроллу"
+      }
+    ]
 
-      p(style="margin-top: 40px;") Пример использования +img()
-      p(style="margin-bottom: 40px;")
-        +img("content", "placeholder", "png", 120, 120, "Пример")
+  section.intro&attributes(attributes)
+    .intro__sticky
+      .container
+        .intro__heading
+          +title({tag: "h1", text: "Задачки на прокачку"}).title--h1.intro__title
+          p.intro__description Задачи на интерфейсную логику, которые часто встречаются на реальных проектах
+        .intro__cards
+          each link in introCards
+            +card(link).intro__card
+      .intro__background
+        video(src="./video/background-wave.mp4", alt="waaaavee", autoplay="true", muted="true", loop="", playsinline="")
