@@ -3,9 +3,9 @@
   display: block;
   padding: 0;
   background-color: $color-transparent;
-  border: none;
-  cursor: pointer;
+  border: 0;
   transition: opacity $trans-default;
+  cursor: pointer;
 
   @include hover-focus {
     opacity: 0.8;
