@@ -11,7 +11,7 @@ mixin intro()
       },
       {
         href: "#first-screen",
-        text: "Сборка первого экрана"
+        text: "Сборка <br> первого экрана"
       },
       {
         href: "#show-on-scroll",
@@ -23,18 +23,18 @@ mixin intro()
       },
       {
         href: "#scroll-slider",
-        text: "Слайдер по скроллу"
+        text: "Слайдер <br> по скроллу"
       }
     ]
 
-  section.intro&attributes(attributes)
+  section.intro(data-animate="intro" data-section-animation data-start="top top" data-end="bottom top")&attributes(attributes)
     .intro__sticky
-      .container
+      .container(data-animation="scale: 0.75, opacity: 0.5, rotateX: 5deg, y: -10vh" data-animation-direction="to")
         .intro__heading
-          +title({tag: "h1", text: "Задачки на прокачку"}).title--h1.intro__title
-          p.intro__description Задачи на интерфейсную логику, которые часто встречаются на реальных проектах
-        .intro__cards
+          +title({tag: "h1", text: "Задачки <br> на прокачку"})(data-splitting).title--h1.intro__title
+          p.intro__description(data-splitting) Задачи на&nbsp;интерфейсную логику, #[br] которые часто встречаются #[br] на&nbsp;реальных проектах
+        .intro__cards(data-animation="scale: 0.7" data-animation-direction="to" data-position="0")
           each link in introCards
-            +card(link).intro__card
+            +card(link)(data-move-to=link.href).intro__card
       .intro__background
-        video(src="./video/background-wave.mp4", alt="waaaavee", autoplay="true", muted="true", loop="", playsinline="")
+        video(src="./video/background-wave.mp4", alt="waaaavee", autoplay="true", muted="true", loop, playsinline)

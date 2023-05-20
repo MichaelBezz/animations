@@ -23,8 +23,8 @@ mixin header(headerMods, currentUrl)
       }
     ]
 
-  header.header(class=headerMods)
+  header.header(class=headerMods, data-fix-block)
     .container
       +logo(currentUrl).header__logo
       +button()(aria-label="Переключатель отображения меню.", aria-pressed="false", data-menu="toggle").button--toggle.header__toggle
-    +navigation(navigationLinks, currentUrl)(data-menu="navigation").header__navigation
+    +navigation(navigationLinks, currentUrl)(data-menu="navigation", data-fix-block).header__navigation

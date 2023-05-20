@@ -25,7 +25,7 @@
 </g></symbol></svg>
     </div>
     <div class="wrapper">
-      <header class="header">
+      <header class="header" data-fix-block>
         <div class="container">
           <div class="logo header__logo"><span>
               <svg width="181" height="33" aria-hidden="true">
@@ -35,7 +35,7 @@
           <button class="button button--toggle header__toggle" type="button" aria-label="Переключатель отображения меню." aria-pressed="false" data-menu="toggle">
           </button>
         </div>
-        <nav class="navigation header__navigation" data-menu="navigation">
+        <nav class="navigation header__navigation" data-menu="navigation" data-fix-block>
           <div class="container">
             <div class="navigation__wrapper">
               <ul class="navigation__list">
@@ -55,24 +55,24 @@
         </nav>
       </header>
       <main>
-        <section class="intro">
+        <section class="intro" data-animate="intro" data-section-animation data-start="top top" data-end="bottom top">
           <div class="intro__sticky">
-            <div class="container">
+            <div class="container" data-animation="scale: 0.75, opacity: 0.5, rotateX: 5deg, y: -10vh" data-animation-direction="to">
               <div class="intro__heading">
-                <h1 class="title title--h1 intro__title">Задачки на прокачку</h1>
-                <p class="intro__description">Задачи на интерфейсную логику, которые часто встречаются на реальных проектах</p>
+                <h1 class="title title--h1 intro__title" data-splitting>Задачки <br> на прокачку</h1>
+                <p class="intro__description" data-splitting>Задачи на&nbsp;интерфейсную логику, <br> которые часто встречаются <br> на&nbsp;реальных проектах</p>
               </div>
-              <div class="intro__cards"><a class="link card intro__card" href="#menu">
-                  <h2 class="title title--h3 card__title">Меню</h2></a><a class="link card intro__card" href="#loader">
-                  <h2 class="title title--h3 card__title">Лоадер</h2></a><a class="link card intro__card" href="#first-screen">
-                  <h2 class="title title--h3 card__title">Сборка первого экрана</h2></a><a class="link card intro__card" href="#show-on-scroll">
-                  <h2 class="title title--h3 card__title">Появление блоков</h2></a><a class="link card intro__card" href="#parallax">
-                  <h2 class="title title--h3 card__title">Параллакс</h2></a><a class="link card intro__card" href="#scroll-slider">
-                  <h2 class="title title--h3 card__title">Слайдер по скроллу</h2></a>
+              <div class="intro__cards" data-animation="scale: 0.7" data-animation-direction="to" data-position="0"><a class="link card intro__card" href="#menu" data-move-to="#menu">
+                  <h2 class="title title--h3 card__title">Меню</h2></a><a class="link card intro__card" href="#loader" data-move-to="#loader">
+                  <h2 class="title title--h3 card__title">Лоадер</h2></a><a class="link card intro__card" href="#first-screen" data-move-to="#first-screen">
+                  <h2 class="title title--h3 card__title">Сборка <br> первого экрана</h2></a><a class="link card intro__card" href="#show-on-scroll" data-move-to="#show-on-scroll">
+                  <h2 class="title title--h3 card__title">Появление блоков</h2></a><a class="link card intro__card" href="#parallax" data-move-to="#parallax">
+                  <h2 class="title title--h3 card__title">Параллакс</h2></a><a class="link card intro__card" href="#scroll-slider" data-move-to="#scroll-slider">
+                  <h2 class="title title--h3 card__title">Слайдер <br> по скроллу</h2></a>
               </div>
             </div>
             <div class="intro__background">
-              <video src="./video/background-wave.mp4" alt="waaaavee" autoplay="true" muted="true" loop="" playsinline=""></video>
+              <video src="./video/background-wave.mp4" alt="waaaavee" autoplay="true" muted="true" loop playsinline></video>
             </div>
           </div>
         </section>
