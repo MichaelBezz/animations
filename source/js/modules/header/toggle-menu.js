@@ -1,4 +1,6 @@
-export const initToggleMenu = function () {
+import {clickObserver} from '../../utils/observers';
+
+export const initToggleMenu = () => {
   const header = document.querySelector('.header');
   const menuToggle = header.querySelector('[data-menu="toggle"]');
   const menuNavigation = header.querySelector('[data-menu="navigation"]');
@@ -9,7 +11,7 @@ export const initToggleMenu = function () {
 
   let isMenuOpen = false;
 
-  const closeMenu = function () {
+  const closeMenu = () => {
     header.classList.remove('is-active');
     menuToggle.classList.remove('is-active');
     menuNavigation.classList.remove('is-active');
@@ -18,7 +20,7 @@ export const initToggleMenu = function () {
     isMenuOpen = false;
   };
 
-  const openMenu = function () {
+  const openMenu = () => {
     header.classList.add('is-active');
     menuToggle.classList.add('is-active');
     menuNavigation.classList.add('is-active');
@@ -27,7 +29,13 @@ export const initToggleMenu = function () {
     isMenuOpen = true;
   };
 
-  const toggleMenu = function () {
+  const toggleMenu = (event) => {
+    const isMenuToggle = event.target.closest('[data-menu="toggle"]');
+
+    if (!isMenuToggle) {
+      return;
+    }
+
     if (isMenuOpen) {
       closeMenu();
     } else {
@@ -35,5 +43,5 @@ export const initToggleMenu = function () {
     }
   };
 
-  menuToggle.addEventListener('click', toggleMenu);
+  clickObserver.subscribe(toggleMenu);
 };

@@ -1,4 +1,4 @@
-export const setHeaderHeight = function () {
+export const setHeaderHeight = () => {
   const header = document.querySelector('.header');
 
   if (!header) {
