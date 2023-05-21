@@ -2,8 +2,8 @@ import {clickObserver} from '../../utils/observers';
 
 export const initToggleMenu = () => {
   const header = document.querySelector('.header');
-  const menuToggle = header.querySelector('[data-menu="toggle"]');
-  const menuNavigation = header.querySelector('[data-menu="navigation"]');
+  const menuToggle = document.querySelector('[data-menu="toggle"]');
+  const menuNavigation = document.querySelector('[data-menu="navigation"]');
 
   if (!header || !menuToggle || !menuNavigation) {
     return;
