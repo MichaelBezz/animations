@@ -1,0 +1,49 @@
+mixin show-scroll-block()
+  -
+    const animationCards = [
+      {
+        title: 'fade',
+        animate: 'fade',
+        wrapper: false
+      },
+      {
+        title: 'fade',
+        animate: 'fade',
+        wrapper: false
+      },
+      {
+        title: 'fade-in',
+        animate: 'fadeIn',
+        wrapper: true
+      },
+      {
+        title: 'fade-in',
+        animate: 'fadeIn',
+        wrapper: true
+      },
+      {
+        title: 'fade-scale',
+        animate: 'fadeScale',
+        wrapper: true
+      },
+      {
+        title: 'fade-scale',
+        animate: 'fadeScale',
+        wrapper: true
+      }
+    ]
+
+  .container&attributes(attributes)
+    +content-block()
+      h2 Появление блоков
+      p доскролили и вжух!
+      p Можно делать через классы и высчитывать по скроллу getBoundingClientRect каждого блока, но гораздо проще использовать ScrollTrigger.batch()
+      .section__cards
+        each card in animationCards
+          if card.wrapper
+            div(data-animate=card.animate)
+              .card.card--dark.card--centered(data-animate-item)
+                +title({tag: "p", text: card.title}).title--h3
+          else
+            .card.card--dark.card--centered(data-animate=card.animate)
+                +title({tag: "p", text: card.title}).title--h3
