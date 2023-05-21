@@ -7,6 +7,15 @@
   border-radius: 10px;
   background-color: rgba($color-default-white, 0.6);
 
+  &--dark {
+    background-color: $color-gainsboro;
+  }
+
+  &--centered {
+    justify-content: center;
+    align-items: center;
+  }
+
   @include vp-1023 {
     min-height: 110px;
     padding: 15px;

@@ -100,6 +100,56 @@
             </div>
           </div>
         </section>
+        <section class="section" id="first-screen">
+          <div class="container">
+            <div class="content-block">
+              <h2>Сборка первого экрана тз</h2>
+              <p>Для анимации используйте неколько разных css свойств и небольшие задержки</p>
+              <p>
+                Для построчной или посимвольной анимации текста используйте
+                <a href="https://splitting.js.org" target="_blank" rel="nofollow noopener noreferrer">splitting.js</a>
+                (пример: интро этого сайта)
+              </p>
+            </div>
+          </div>
+        </section>
+        <section class="section" id="show-on-scroll">
+          <div class="container">
+            <div class="content-block">
+              <h2>Появление блоков</h2>
+              <p>доскролили и вжух!</p>
+              <p>Можно делать через классы и высчитывать по скроллу getBoundingClientRect каждого блока, но гораздо проще использовать ScrollTrigger.batch()</p>
+              <div class="section__cards">
+                <div class="card card--dark card--centered" data-animate="fade">
+                  <p class="title title--h3">fade</p>
+                </div>
+                <div class="card card--dark card--centered" data-animate="fade">
+                  <p class="title title--h3">fade</p>
+                </div>
+                <div data-animate="fadeIn">
+                  <div class="card card--dark card--centered" data-animate-item>
+                    <p class="title title--h3">fade-in</p>
+                  </div>
+                </div>
+                <div data-animate="fadeIn">
+                  <div class="card card--dark card--centered" data-animate-item>
+                    <p class="title title--h3">fade-in</p>
+                  </div>
+                </div>
+                <div data-animate="fadeScale">
+                  <div class="card card--dark card--centered" data-animate-item>
+                    <p class="title title--h3">fade-scale</p>
+                  </div>
+                </div>
+                <div data-animate="fadeScale">
+                  <div class="card card--dark card--centered" data-animate-item>
+                    <p class="title title--h3">fade-scale</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
     </div>
     <script src="js/vendor.min.js"></script>
