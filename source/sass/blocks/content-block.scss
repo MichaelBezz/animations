@@ -3,15 +3,6 @@
     text-align: center;
   }
 
-  .section & {
-    margin: 0 auto;
-    max-width: 70%;
-
-    @include vp-767 {
-      max-width: 100%;
-    }
-  }
-
   h1 {
     margin: 0;
     font-size: 60px;
