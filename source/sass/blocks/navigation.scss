@@ -74,12 +74,13 @@
 
     span {
       display: block;
+      transition: transform $trans-400;
     }
 
     @include hover-focus {
       &:not(.is-active) span {
         transform: translate3d(30px, 0, 0);
-        transition: transform $trans-400;
+        transition-delay: 0s;
       }
     }
   }
