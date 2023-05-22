@@ -8,6 +8,29 @@ block variables
   - const hasFooter = false
   - const footerMods = ""
   - const currentUrl = "index.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+  -
+    const slides = [
+      {
+        title: 'Scroll Slider',
+        text: 'переключение полноэкранных слайдов по скроллу',
+        background: 'img/svg/architect-bg.svg'
+      },
+      {
+        title: 'position: sticky;',
+        text: 'Просто стики. Не нужно мучаться с position: fixed; или pin: true, <br> (т.к. баги на тач неисправимы)',
+        background: 'img/svg/squares-bg.svg'
+      },
+      {
+        title: 'gsap scrollTrigger',
+        text: 'без getBoundingClientRect <br> ScrollTrigger делает всю рутину за нас',
+        background: 'img/svg/plus-bg.svg'
+      },
+      {
+        title: 'ios friendly???',
+        text: 'не забывайте добавлять вокруг transform: translate3d(0, 0, 0);',
+        background: 'img/svg/graph-paper-bg.svg'
+      },
+    ]
 
 block main
   main
@@ -22,5 +45,7 @@ block main
       +show-scroll-block()
     +section()(id="parallax")
       +parallax-block()
+    +scroll-slider(slides)
+  +loader().is-hidden
 
 block modals

@@ -10,6 +10,7 @@ $color-transparent:                 rgba(255, 255, 255, 0);
 // Project palette
 // для нейминга цветов используем https://www.htmlcsscolor.com/hex/334482
 
+$color-white-smoke:                 #f6f6f6;
 $color-gainsboro:                   #e3e3e3;
 $color-night-rider:                 #303030;
 
@@ -56,6 +57,10 @@ $retina-dppx:                       1.5dppx;
 
 // Z-index
 // ---------------------------------
+$z-index-loader:                    1000;
 $z-index-header:                    100;
 $z-index-header-top:                2;
+$z-index-slide-container:           2;
+$z-index-slide-bg:                  1;
 $z-index-intro-bg:                  -1;
+$z-index-slide-content-before:      -1;
