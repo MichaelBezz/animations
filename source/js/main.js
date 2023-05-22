@@ -4,6 +4,8 @@ import {Form} from './modules/form-validate/form';
 import {CustomSelect} from './modules/select/custom-select';
 import {uploadFile, uploadImageDrop} from './modules/input-file/init-upload';
 import {initHeaderModules} from './modules/header/index';
+import {initAnimationModule} from './modules/animation/index';
+import {Loader} from './modules/loader/loader';
 
 // ---------------------------------
 
@@ -17,6 +19,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // Modules
   // ---------------------------------
   initHeaderModules();
+  const loader = new Loader();
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
@@ -29,6 +32,10 @@ window.addEventListener('DOMContentLoaded', () => {
     const form = new Form();
     window.form = form;
     form.init();
+  });
+
+  window.addEventListener('loaderOff', () => {
+    initAnimationModule();
   });
 });
 
