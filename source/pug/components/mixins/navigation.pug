@@ -1,5 +1,5 @@
 mixin navigation(navigationLinks, currentUrl)
-  nav.navigation&attributes(attributes)
+  nav.navigation(data-fix-block)&attributes(attributes)
     .container
       .navigation__wrapper
         ul.navigation__list
