@@ -1,0 +1,9 @@
+mixin scroll-slide(data)
+  - const {title, text, background} = data
+
+  .scroll-slide(data-scroll-slider="slide")&attributes(attributes)
+    .container
+      .content-block.content-block--centered
+        h2!=title
+        p!=text
+      .scroll-slide__bg(style=`background-image: url(${background})`)

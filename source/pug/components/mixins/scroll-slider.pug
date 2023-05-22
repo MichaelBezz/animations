@@ -1,0 +1,5 @@
+mixin scroll-slider(slides)
+  .scroll-slider(data-scroll-slider="parent")&attributes(attributes)
+    section.scroll-slider__sticky(id="scroll-slider", data-scroll-slider="sticky")
+      each slide in slides
+        +scroll-slide(slide)
