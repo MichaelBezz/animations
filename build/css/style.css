@@ -427,7 +427,7 @@ template {
             transform: translate3d(-300%, 0, 0);
   }
 }
-[data-animate=fade] {
+[data-animate=fade] [data-animate-item] {
   opacity: 0;
 }
 

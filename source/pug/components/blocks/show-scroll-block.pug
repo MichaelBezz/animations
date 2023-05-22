@@ -3,33 +3,27 @@ mixin show-scroll-block()
     const animationCards = [
       {
         title: 'fade',
-        animate: 'fade',
-        wrapper: false
+        animate: 'fade'
       },
       {
         title: 'fade',
-        animate: 'fade',
-        wrapper: false
+        animate: 'fade'
       },
       {
         title: 'fade-in',
-        animate: 'fadeIn',
-        wrapper: true
+        animate: 'fadeIn'
       },
       {
         title: 'fade-in',
-        animate: 'fadeIn',
-        wrapper: true
+        animate: 'fadeIn'
       },
       {
         title: 'fade-scale',
-        animate: 'fadeScale',
-        wrapper: true
+        animate: 'fadeScale'
       },
       {
         title: 'fade-scale',
-        animate: 'fadeScale',
-        wrapper: true
+        animate: 'fadeScale'
       }
     ]
 
@@ -40,10 +34,6 @@ mixin show-scroll-block()
       p Можно делать через классы и высчитывать по скроллу getBoundingClientRect каждого блока, но гораздо проще использовать ScrollTrigger.batch()
       .section__cards
         each card in animationCards
-          if card.wrapper
             div(data-animate=card.animate)
               .card.card--dark.card--centered(data-animate-item)
-                +title({tag: "p", text: card.title}).title--h3
-          else
-            .card.card--dark.card--centered(data-animate=card.animate)
                 +title({tag: "p", text: card.title}).title--h3

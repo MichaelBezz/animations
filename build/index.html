@@ -120,11 +120,15 @@
               <p>доскролили и вжух!</p>
               <p>Можно делать через классы и высчитывать по скроллу getBoundingClientRect каждого блока, но гораздо проще использовать ScrollTrigger.batch()</p>
               <div class="section__cards">
-                <div class="card card--dark card--centered" data-animate="fade">
-                  <p class="title title--h3">fade</p>
+                <div data-animate="fade">
+                  <div class="card card--dark card--centered" data-animate-item>
+                    <p class="title title--h3">fade</p>
+                  </div>
                 </div>
-                <div class="card card--dark card--centered" data-animate="fade">
-                  <p class="title title--h3">fade</p>
+                <div data-animate="fade">
+                  <div class="card card--dark card--centered" data-animate-item>
+                    <p class="title title--h3">fade</p>
+                  </div>
                 </div>
                 <div data-animate="fadeIn">
                   <div class="card card--dark card--centered" data-animate-item>
@@ -157,22 +161,22 @@
               <p>Эффекты, которые постоянно срабатывают по скроллу <br> Скроллим скроллим и вжух вжух вжух!</p>
               <div class="section__cards">
                 <div data-parallax="fadeScale">
-                  <div class="card card--dark card--centered" data-animate-item>
+                  <div class="card card--dark card--centered" data-parallax-item>
                     <p class="title title--h3">fade-scale</p>
                   </div>
                 </div>
                 <div data-parallax="fadeScale">
-                  <div class="card card--dark card--centered" data-animate-item>
+                  <div class="card card--dark card--centered" data-parallax-item>
                     <p class="title title--h3">fade-scale</p>
                   </div>
                 </div>
                 <div data-parallax="transformY">
-                  <div class="card card--dark card--centered" data-animate-item>
+                  <div class="card card--dark card--centered" data-parallax-item>
                     <p class="title title--h3">transform y</p>
                   </div>
                 </div>
                 <div data-parallax="transformY">
-                  <div class="card card--dark card--centered" data-animate-item>
+                  <div class="card card--dark card--centered" data-parallax-item>
                     <p class="title title--h3">transform y</p>
                   </div>
                 </div>

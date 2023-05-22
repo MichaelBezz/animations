@@ -3,8 +3,8 @@ import {ScrollTrigger} from '../../vendor/gsap/scroll-trigger.min.js';
 import {pageScroller} from '../../utils/page-scroller';
 
 ScrollTrigger.batch('[data-animate="fade"]', {
-  onEnter: (batch) => {
-    gsap.to(batch, {
+  onEnter: () => {
+    return gsap.to('[data-animate="fade"] [data-animate-item]', {
       autoAlpha: 1,
       duration: 0.45,
       stagger: 0.1,
