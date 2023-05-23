@@ -1,6 +1,7 @@
 import {ScrollSlider} from './scroll-slider';
 import {generateTimeline} from './generate-timeline';
 import {initParallaxComponents} from './parallax';
+import {initScrollTo} from './scroll-to';
 import './batch-blocks';
 
 export const initAnimationModule = () => {
@@ -8,4 +9,5 @@ export const initAnimationModule = () => {
   const scrollSlider = new ScrollSlider(sliderContainer);
   generateTimeline();
   initParallaxComponents();
+  initScrollTo();
 };
