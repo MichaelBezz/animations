@@ -3,7 +3,7 @@
   width: 181px;
   height: 33px;
   color: $color-night-rider;
-  transition: color $trans-default;
+  transition: color $trans-ease-default;
 
   @include vp-767 {
     width: 145px;

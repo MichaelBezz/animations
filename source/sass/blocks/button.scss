@@ -4,7 +4,7 @@
   padding: 0;
   background-color: $color-transparent;
   border: 0;
-  transition: opacity $trans-default;
+  transition: opacity $trans-ease-default;
   cursor: pointer;
 
   @include hover-focus {
@@ -28,7 +28,7 @@
       width: 36px;
       height: 2px;
       background-color: $color-night-rider;
-      transition: transform $trans-default, background-color $trans-default;
+      transition: transform $trans-ease-default, background-color $trans-ease-default;
     }
 
     &::before {

@@ -1,5 +1,5 @@
 import {gsap} from '../../vendor/gsap/gsap.min.js';
-import {ScrollToPlugin} from '../../vendor/gsap/scroll-to.min.js';
+import {ScrollToPlugin} from '../../vendor/gsap/scroll-to-plugin.min.js';
 import {pageScroller} from '../../utils/page-scroller';
 
 const header = document.querySelector('.header');
@@ -37,9 +37,13 @@ const scrollToHandler = (event) => {
 };
 
 export const initScrollTo = () => {
-  gsap.registerPlugin(ScrollToPlugin);
-
   const scrollToButtons = document.querySelectorAll('[data-move-to]');
+
+  if (!scrollToButtons) {
+    return;
+  }
+
+  gsap.registerPlugin(ScrollToPlugin);
 
   scrollToButtons.forEach((button) => {
     button.addEventListener('click', scrollToHandler);

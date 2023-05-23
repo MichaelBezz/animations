@@ -70,11 +70,11 @@
   &__link {
     width: fit-content;
     transform: translate3d(0, 110%, 0);
-    transition: transform $trans-400;
+    transition: transform $trans-ease-400;
 
     span {
       display: block;
-      transition: transform $trans-400;
+      transition: transform $trans-ease-400;
     }
 
     @include hover-focus {

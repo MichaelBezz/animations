@@ -13,7 +13,7 @@
   opacity: 0;
   pointer-events: none;
   transform: translate3d(0, 0, 0);
-  transition: $trans-default;
+  transition: $trans-ease-default;
 
   &.is-active {
     opacity: 1;
