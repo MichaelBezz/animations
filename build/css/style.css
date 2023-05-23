@@ -315,14 +315,30 @@ template {
 }
 
 /* Recommended styles for Splitting */
+.splitting {
+  /* The center word index */
+  --word-center: calc((var(--word-total) - 1) / 2);
+  /* The center character index */
+  --char-center: calc((var(--char-total) - 1) / 2);
+  /* The center character index */
+  --line-center: calc((var(--line-total) - 1) / 2);
+}
+
 .splitting .word,
 .splitting .char {
+  position: relative;
   display: inline-block;
 }
 
+.splitting .word {
+  color: transparent;
+  /* Pecent (0-1) of the word's position */
+  --word-percent: calc(var(--word-index) / var(--word-total));
+  /* Pecent (0-1) of the line's position */
+  --line-percent: calc(var(--line-index) / var(--line-total));
+}
+
 .splitting .char {
-  /* Psuedo-element chars */
-  position: relative;
   /* Percent (0-1) of the char's position */
   --char-percent: calc(var(--char-index) / var(--char-total));
   /* Offset from center, positive & negative */
@@ -358,75 +374,17 @@ template {
           user-select: none;
 }
 
-/* Expanded CSS Variables */
-.splitting {
-  /* The center word index */
-  --word-center: calc((var(--word-total) - 1) / 2);
-  /* The center character index */
-  --char-center: calc((var(--char-total) - 1) / 2);
-  /* The center character index */
-  --line-center: calc((var(--line-total) - 1) / 2);
+.splitting .word::after {
+  content: attr(data-word);
+  position: absolute;
+  top: -4px;
+  left: 0;
+  color: #303030;
+  -webkit-transition: inherit;
+  -o-transition: inherit;
+  transition: inherit;
 }
 
-.splitting .word {
-  /* Pecent (0-1) of the word's position */
-  --word-percent: calc(var(--word-index) / var(--word-total));
-  /* Pecent (0-1) of the line's position */
-  --line-percent: calc(var(--line-index) / var(--line-total));
-}
-
-.splitting.cells img {
-  width: 100%;
-  display: block;
-}
-
-@supports (display: grid) {
-  .splitting.cells {
-    position: relative;
-    overflow: hidden;
-    background-size: cover;
-    visibility: hidden;
-  }
-  .splitting .cell-grid {
-    background: inherit;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-rows: (1fr)[var(--row-total)];
-    -ms-grid-columns: (1fr)[var(--col-total)];
-        grid-template: repeat(var(--row-total), 1fr)/repeat(var(--col-total), 1fr);
-  }
-  .splitting .cell {
-    background: inherit;
-    position: relative;
-    overflow: hidden;
-    /* Helper variables for advanced effects */
-    --center-x: calc((var(--col-total) - 1) / 2);
-    --center-y: calc((var(--row-total) - 1) / 2);
-    /* Offset from center, positive & negative */
-    --offset-x: calc(var(--col-index) - var(--center-x));
-    --offset-y: calc(var(--row-index) - var(--center-y));
-    /* Absolute distance from center, only positive */
-    --distance-x: calc((var(--offset-x) * var(--offset-x)) / var(--center-x));
-    /* Absolute distance from center, only positive */
-    --distance-y: calc((var(--offset-y) * var(--offset-y)) / var(--center-y));
-  }
-  .splitting .cell-inner {
-    background: inherit;
-    position: absolute;
-    visibility: visible;
-    /* Size to fit the whole container size */
-    width: calc(100% * var(--col-total));
-    height: calc(100% * var(--row-total));
-    /* Position properly */
-    left: calc(-100% * var(--col-index));
-    top: calc(-100% * var(--row-index));
-  }
-}
 @-webkit-keyframes disableBreakpointAnimation {
   0% {
     visibility: hidden;
@@ -437,6 +395,7 @@ template {
     opacity: 0;
   }
 }
+
 @keyframes disableBreakpointAnimation {
   0% {
     visibility: hidden;
@@ -2210,6 +2169,10 @@ button,
       -ms-transform: scale(1);
           transform: scale(1);
 }
+.intro.is-shown .word::after {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
 .intro__sticky {
   position: sticky;
   top: 0;
@@ -2266,6 +2229,21 @@ button,
     margin-top: 20px;
     text-align: left;
   }
+}
+.intro__title .word, .intro__description .word {
+  overflow: hidden;
+}
+.intro__title .word::after, .intro__description .word::after {
+  -webkit-transform: translate3d(0, 100%, 0);
+          transform: translate3d(0, 100%, 0);
+  -webkit-transition: -webkit-transform 0.4s ease-out;
+  transition: -webkit-transform 0.4s ease-out;
+  -o-transition: transform 0.4s ease-out;
+  transition: transform 0.4s ease-out;
+  transition: transform 0.4s ease-out, -webkit-transform 0.4s ease-out;
+  -webkit-transition-delay: calc(0.08s * var(--line-index));
+       -o-transition-delay: calc(0.08s * var(--line-index));
+          transition-delay: calc(0.08s * var(--line-index));
 }
 .intro__cards {
   display: -ms-grid;
@@ -2326,37 +2304,6 @@ button,
   opacity: 0.4;
   -webkit-filter: blur(8px) contrast(1) sepia(1) grayscale(1) brightness(0.7);
           filter: blur(8px) contrast(1) sepia(1) grayscale(1) brightness(0.7);
-}
-
-.intro.is-shown .intro__description .word::after,
-.intro.is-shown .intro__title .word::after {
-  -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
-}
-
-.intro .intro__description .word,
-.intro .intro__title .word {
-  overflow: hidden;
-}
-
-.intro .intro__description .word::after,
-.intro .intro__title .word::after {
-  -webkit-transition: -webkit-transform 0.4s ease-out;
-  transition: -webkit-transform 0.4s ease-out;
-  -o-transition: transform 0.4s ease-out;
-  transition: transform 0.4s ease-out;
-  transition: transform 0.4s ease-out, -webkit-transform 0.4s ease-out;
-  -webkit-transform: translate3d(0, 100%, 0);
-          transform: translate3d(0, 100%, 0);
-  -webkit-transition-delay: calc(0.08s * var(--line-index));
-       -o-transition-delay: calc(0.08s * var(--line-index));
-          transition-delay: calc(0.08s * var(--line-index));
-}
-
-.intro .intro__description .word::after {
-  -webkit-transition-delay: calc(0.08s * var(--line-index) + 0.2s);
-       -o-transition-delay: calc(0.08s * var(--line-index) + 0.2s);
-          transition-delay: calc(0.08s * var(--line-index) + 0.2s);
 }
 
 .title {
