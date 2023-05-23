@@ -6,6 +6,7 @@ import {uploadFile, uploadImageDrop} from './modules/input-file/init-upload';
 import {initHeaderModules} from './modules/header/index';
 import {initAnimationModule} from './modules/animation/index';
 import {Loader} from './modules/loader/loader';
+import {initMaps} from './modules/maps/init-maps';
 
 // ---------------------------------
 
@@ -32,6 +33,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const form = new Form();
     window.form = form;
     form.init();
+    initMaps();
   });
 
   window.addEventListener('loaderOff', () => {
