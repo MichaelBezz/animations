@@ -33,7 +33,7 @@ mixin intro()
         .intro__heading
           +title({tag: "h1", text: "Задачки <br> на прокачку"})(data-splitting).title--h1.intro__title
           p.intro__description(data-splitting) Задачи на&nbsp;интерфейсную логику, #[br] которые часто встречаются #[br] на&nbsp;реальных проектах
-        .intro__cards(data-animation="scale: 0.7" data-animation-direction="to" data-position="0")
+        .intro__cards
           each link in introCards
             +card(link)(data-move-to=link.href).intro__card
       .intro__background

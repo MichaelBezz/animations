@@ -1,5 +1,6 @@
 import {gsap} from '../../vendor/gsap/gsap.min.js';
 import {ScrollTrigger} from '../../vendor/gsap/scroll-trigger.min.js';
+import {pageScroller} from '../../utils/page-scroller';
 import {resizeObserver} from '../../utils/observers';
 
 export class ScrollSlider {
@@ -7,8 +8,6 @@ export class ScrollSlider {
     if (!slider) {
       return;
     }
-
-    this.vpTouch = window.matchMedia('(pointer: coarse)');
 
     this.container = slider;
     this.slides = this.container.querySelectorAll('[data-scroll-slider="slide"]');
@@ -52,7 +51,7 @@ export class ScrollSlider {
     });
 
     ScrollTrigger.create({
-      scroller: this.vpTouch.matches ? '.wrapper' : 'body',
+      scroller: pageScroller,
       trigger: this.container,
       start: 'top top',
       end: 'bottom bottom',

@@ -28,11 +28,11 @@ const getObjectFromString = (str) => {
 
 const getAnimationObject = (el) => {
   const obj = {};
+  obj.element = el;
   obj.direction = el.dataset.animationDirection;
   obj.duration = +el.dataset.animationDuration || 1;
   obj.delay = +el.dataset.animationDelay || 0;
   obj.position = el.dataset.position;
-  obj.element = el;
   obj.animation = getObjectFromString(el.dataset.animation.toString());
   return obj;
 };
@@ -65,12 +65,12 @@ export const generateTimeline = () => {
       const obj = getAnimationObject(block);
 
       if (!obj.position) {
-        tl[obj.direction](obj.element, Object.assign({}, {
+        tl[obj.direction](obj.element, Object.assign({
           duration: obj.duration,
           delay: obj.delay,
         }, obj.animation), obj.position);
       } else {
-        tl[obj.direction](obj.element, Object.assign({}, {
+        tl[obj.direction](obj.element, Object.assign({
           duration: obj.duration,
           delay: obj.delay,
         }, obj.animation));
