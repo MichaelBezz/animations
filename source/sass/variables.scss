@@ -12,6 +12,7 @@ $color-transparent:                 rgba(255, 255, 255, 0);
 
 $color-white-smoke:                 #f6f6f6;
 $color-gainsboro:                   #e3e3e3;
+$color-cloudy:                      #aaa5a0;
 $color-maya-blue:                   #6bcaff;
 $color-nile-blue:                   #223c50;
 $color-night-rider:                 #303030;
@@ -41,6 +42,7 @@ $trans-menu:                        0.7s cubic-bezier(0.55, 0, 0.44, .99);
 
 $trans-ease-350:                    0.35s $tf-ease;
 $trans-ease-400:                    0.4s $tf-ease;
+$trans-ease-600:                    0.6s $tf-ease;
 $trans-ease-out-400:                0.4s $tf-ease-out;
 
 // Viewports
@@ -64,6 +66,7 @@ $retina-dppx:                       1.5dppx;
 // ---------------------------------
 $z-index-loader:                    1000;
 $z-index-header:                    100;
+$z-index-map-placemark-balloon:     3;
 $z-index-header-top:                2;
 $z-index-slide-container:           2;
 $z-index-slide-bg:                  1;
