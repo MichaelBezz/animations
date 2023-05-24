@@ -1,4 +1,5 @@
 import {initMap1} from './map-1';
+import {initMap2} from './map-2';
 
 const initDefaultMap = (mapBlock) => {
   window.ymaps.ready(() => {
@@ -18,6 +19,9 @@ const initDefaultMap = (mapBlock) => {
 
 const initSetupMap = (mapId, mapBlock) => {
   switch (mapId) {
+    case 'map-2':
+      initMap2(mapBlock);
+      break;
     case 'map-1':
       initMap1(mapBlock);
       break;

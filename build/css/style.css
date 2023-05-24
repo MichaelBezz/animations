@@ -2577,6 +2577,16 @@ button,
   pointer-events: all;
 }
 
+.map-pin {
+  position: relative;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+.map-pin svg {
+  -webkit-filter: drop-shadow(4px 4px 8px rgba(34, 60, 80, 0.2));
+          filter: drop-shadow(4px 4px 8px rgba(34, 60, 80, 0.2));
+}
+
 /* @mixin hover-focus {
     @media (hover: hover) {
       &:hover:not(.focus-visible) {
