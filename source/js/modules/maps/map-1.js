@@ -2,7 +2,6 @@ import {initMapPin} from './init-map-pin';
 
 export const initMap1 = (mapBlock) => {
   const center = mapBlock.dataset.center.split(', ').map((str) => +str);
-
   const zoom = +mapBlock.dataset.zoom;
   const controls = mapBlock.dataset.controls ? mapBlock.dataset.controls.split(' ') : [];
   const behaviors = ['drag', 'multiTouch'];
@@ -15,7 +14,9 @@ export const initMap1 = (mapBlock) => {
           controls,
           behaviors,
         },
-        {autoFitToViewport: 'always'}
+        {
+          autoFitToViewport: 'always',
+        }
     );
 
     initMapPin(mapBlock, myMap);

@@ -8,9 +8,25 @@ block variables
   - const hasFooter = false
   - const footerMods = ""
   - const currentUrl = "map-1.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+  -
+    const data = {
+      title: 'Задание по карте №1',
+      subTitle: 'Техническое задание',
+      description: [
+        'Реализовать карту через API Яндекс карт',
+        'Настроить кастомный пин на карте так, что бы его стрелочка четко указывала на центр координат, которые вы можете придумать сами',
+        'На десктопной версии при скролле колесиком мышки, карта не должна масштабироваться.'
+      ],
+      mapOption: {
+        id: 'map-1',
+        center: '59.968513, 30.317772',
+        zoom: '17',
+        markers: ''
+      }
+    }
 
 block main
   main
-    +ya-map()
+    +ya-map(data)
 
 block modals

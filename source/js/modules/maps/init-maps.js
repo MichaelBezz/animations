@@ -11,7 +11,8 @@ const initDefaultMap = (mapBlock) => {
         {
           suppressMapOpenBlock: true,
           searchControlProvider: 'yandex#search',
-        });
+        }
+    );
   });
 };
 
