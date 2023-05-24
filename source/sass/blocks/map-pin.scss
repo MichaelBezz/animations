@@ -1,0 +1,8 @@
+.map-pin {
+  position: relative;
+  transform: translate3d(0, 0, 0);
+
+  svg {
+    filter: drop-shadow(4px 4px 8px rgba($color-nile-blue, 0.2));
+  }
+}
