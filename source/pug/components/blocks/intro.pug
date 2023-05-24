@@ -35,6 +35,6 @@ mixin intro()
           p.intro__description(data-splitting) Задачи на&nbsp;интерфейсную логику, #[br] которые часто встречаются #[br] на&nbsp;реальных проектах
         .intro__cards
           each link in introCards
-            +card(link)(data-move-to=link.href).intro__card
+            +card(link)(data-move-to=link.href, data-card="intro").intro__card
       .intro__background
         video(src="./video/background-wave.mp4", alt="waaaavee", autoplay="true", muted="true", loop, playsinline)

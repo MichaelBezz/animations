@@ -4,7 +4,7 @@ import {Form} from './modules/form-validate/form';
 import {CustomSelect} from './modules/select/custom-select';
 import {uploadFile, uploadImageDrop} from './modules/input-file/init-upload';
 import {initHeaderModules} from './modules/header/index';
-import {initAnimationModule} from './modules/animation/index';
+import {initAnimationModules} from './modules/animation/index';
 import {Loader} from './modules/loader/loader';
 import {initMaps} from './modules/maps/init-maps';
 
@@ -37,7 +37,7 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 
   window.addEventListener('loaderOff', () => {
-    initAnimationModule();
+    initAnimationModules();
   });
 });
 

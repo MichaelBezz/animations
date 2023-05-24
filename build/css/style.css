@@ -2122,53 +2122,6 @@ button,
   max-height: calc(200 * var(--vh, 1vh));
   margin-bottom: calc(-100 * var(--vh, 1vh));
 }
-.intro .card {
-  opacity: 0;
-  -webkit-transform: scale(0.6);
-      -ms-transform: scale(0.6);
-          transform: scale(0.6);
-  -webkit-transition: opacity 0.35s ease, -webkit-transform 0.4s ease;
-  transition: opacity 0.35s ease, -webkit-transform 0.4s ease;
-  -o-transition: opacity 0.35s ease, transform 0.4s ease;
-  transition: opacity 0.35s ease, transform 0.4s ease;
-  transition: opacity 0.35s ease, transform 0.4s ease, -webkit-transform 0.4s ease;
-}
-.intro .card:nth-child(1) {
-  -webkit-transition-delay: 0.15s;
-       -o-transition-delay: 0.15s;
-          transition-delay: 0.15s;
-}
-.intro .card:nth-child(2) {
-  -webkit-transition-delay: 0.2s;
-       -o-transition-delay: 0.2s;
-          transition-delay: 0.2s;
-}
-.intro .card:nth-child(3) {
-  -webkit-transition-delay: 0.25s;
-       -o-transition-delay: 0.25s;
-          transition-delay: 0.25s;
-}
-.intro .card:nth-child(4) {
-  -webkit-transition-delay: 0.3s;
-       -o-transition-delay: 0.3s;
-          transition-delay: 0.3s;
-}
-.intro .card:nth-child(5) {
-  -webkit-transition-delay: 0.35s;
-       -o-transition-delay: 0.35s;
-          transition-delay: 0.35s;
-}
-.intro .card:nth-child(6) {
-  -webkit-transition-delay: 0.4s;
-       -o-transition-delay: 0.4s;
-          transition-delay: 0.4s;
-}
-.intro.is-shown .card {
-  opacity: 1;
-  -webkit-transform: scale(1);
-      -ms-transform: scale(1);
-          transform: scale(1);
-}
 .intro.is-shown .word::after {
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
@@ -2403,6 +2356,13 @@ button,
 }
 .card__title {
   text-align: right;
+}
+
+[data-card=intro] {
+  opacity: 0;
+  -webkit-transform: scale(0.6);
+      -ms-transform: scale(0.6);
+          transform: scale(0.6);
 }
 
 .scroll-slider {

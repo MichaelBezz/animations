@@ -43,11 +43,11 @@ export class Loader {
 
     this.container.classList.add('is-hidden');
 
-    window.dispatchEvent(this.event);
-
     if (this.animateIntro) {
       this.animateIntro.classList.add('is-shown');
     }
+
+    window.dispatchEvent(this.event);
   }
 
   init() {

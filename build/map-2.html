@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <title>Map #1</title>
+    <title>Map #2</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -76,9 +76,9 @@
               <ul class="navigation__list">
                 <li class="navigation__item"><a class="link link--big link--white navigation__link" href="index.html"><span>Анимации</span></a>
                 </li>
-                <li class="navigation__item"><span class="link link--big link--white navigation__link is-active">Карта 1</span>
+                <li class="navigation__item"><a class="link link--big link--white navigation__link" href="map-1.html"><span>Карта 1</span></a>
                 </li>
-                <li class="navigation__item"><a class="link link--big link--white navigation__link" href="map-2.html"><span>Карта 2</span></a>
+                <li class="navigation__item"><span class="link link--big link--white navigation__link is-active">Карта 2</span>
                 </li>
                 <li class="navigation__item"><a class="link link--big link--white navigation__link" href="map-3.html"><span>Карта 3</span></a>
                 </li>
@@ -92,13 +92,14 @@
       <main>
         <section class="ya-map">
           <div class="container">
-            <h1 class="title title--h1 ya-map__title">Задание по карте №1</h1>
+            <h1 class="title title--h1 ya-map__title">Задание по карте №2</h1>
             <h2 class="title">Техническое задание</h2>
             <p>Реализовать карту через API Яндекс карт</p>
             <p>Настроить кастомный пин на карте так, что бы его стрелочка четко указывала на центр координат, которые вы можете придумать сами</p>
             <p>На десктопной версии при скролле колесиком мышки, карта не должна масштабироваться.</p>
+            <p>Создать и расположить пины на карте из json файла. При клике на каждый пин выводить какую нибудь информацию в небольшом всплывающем окошке, которое будет появляться над пином</p>
             <div class="ya-map__inner">
-              <div class="ya-map__map" data-map="map-1" data-center="59.968513, 30.317772" data-zoom="17" data-markers-url=""></div>
+              <div class="ya-map__map" data-map="map-2" data-center="59.968513, 30.317772" data-zoom="15" data-markers-url="data/maps-markers.json"></div>
             </div>
           </div>
         </section>
