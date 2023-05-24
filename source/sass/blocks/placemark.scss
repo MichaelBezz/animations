@@ -1,0 +1,19 @@
+.placemark {
+  z-index: $z-index-map-placemark;
+  position: relative;
+  width: 48px;
+  height: 48px;
+  outline: 0;
+  transform: translate3d(0, 0, 0);
+  transition: z-index $trans-ease-default, transform $trans-ease-default, visibility $trans-ease-default;
+
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    background-color: $color-maya-blue;
+    border-radius: 50%;
+  }
+}
