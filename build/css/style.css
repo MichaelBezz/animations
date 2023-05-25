@@ -2700,6 +2700,91 @@ button,
   fill: #000000;
 }
 
+.map-filter {
+  padding: 50px 0 0;
+}
+.map-filter__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: -10px -15px 0;
+  padding: 0;
+  list-style: none;
+}
+.map-filter__item {
+  padding: 10px 15px 0;
+}
+.map-filter input:checked + .map-filter__label {
+  background-color: #6bcaff;
+}
+.map-filter input:checked + .map-filter__label svg {
+  -webkit-transform: scale(1.15);
+      -ms-transform: scale(1.15);
+          transform: scale(1.15);
+}
+@media (hover: hover) {
+  .map-filter input:checked:hover:not(.focus-visible) + .map-filter__label {
+    opacity: 1;
+  }
+}
+.map-filter input:checked.focus-visible:focus + .map-filter__label {
+  border-color: #0032ff;
+  opacity: 1;
+}
+.map-filter__label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 20px 10px 5px;
+  font-size: 18px;
+  line-height: 1.1666666667;
+  background-color: rgba(107, 202, 255, 0.5);
+  border: 2px solid rgba(255, 255, 255, 0);
+  border-radius: 15px;
+  -webkit-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+.map-filter__label svg {
+  margin: 0 10px 0 0;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  -o-transition: transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+@media (hover: hover) {
+  .map-filter__label:hover:not(.focus-visible) {
+    opacity: 0.65;
+  }
+  .map-filter__label:hover:not(.focus-visible) svg {
+    -webkit-transform: scale(1.15);
+        -ms-transform: scale(1.15);
+            transform: scale(1.15);
+  }
+}
+.map-filter__label.focus-visible:focus {
+  opacity: 0.65;
+}
+.map-filter__label.focus-visible:focus svg {
+  -webkit-transform: scale(1.15);
+      -ms-transform: scale(1.15);
+          transform: scale(1.15);
+}
+
 /* @mixin hover-focus {
     @media (hover: hover) {
       &:hover:not(.focus-visible) {
