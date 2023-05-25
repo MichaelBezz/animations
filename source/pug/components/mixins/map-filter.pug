@@ -1,0 +1,12 @@
+mixin map-filter(filters)
+  .map-filter&attributes(attributes)
+    form.map-filter__form(action="#", novalidate)
+      .map-filter__list
+        each filter in filters
+          - const {id, title, value, icon, checked} = filter
+          .map-filter__item
+            input.visually-hidden(type="radio", name="filterList", value=value, id=id, checked=checked)
+            label.map-filter__label(for=id)
+              .map-filter__icon
+                +icon(icon, 50, 50)
+              span Все объекты
