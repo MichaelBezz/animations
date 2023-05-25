@@ -50,11 +50,11 @@ export const initCategoryPins = (mapBlock, ymap) => {
             <p class="placemark-balloon__title">$[properties.title]</p>
             <p class="placemark-balloon__text {% if properties.textLeft %} placemark-balloon__text--right-text {% endif %}">
               {% if properties.text %}
-              {% if properties.linkHref %}
-                <a href="$[properties.linkHref]">$[properties.text]</a>
-              {% else %}
-                <span>$[properties.text]</span>
-              {% endif %}
+                {% if properties.linkHref %}
+                  <a href="$[properties.linkHref]">$[properties.text]</a>
+                {% else %}
+                  <span>$[properties.text]</span>
+                {% endif %}
               {% endif %}
               {% if properties.textRight %}
                 <span class="right">$[properties.textRight]</span>
