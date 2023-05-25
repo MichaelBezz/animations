@@ -1,6 +1,7 @@
 mixin ya-map(data)
-  - const {title, subTitle, description, mapOption} = data
+  - const {title, subTitle, description, mapOption, mapFilters} = data
   - const {id, center, zoom, markers} = mapOption
+  - const {withFilter, filters} = mapFilters
 
   section.ya-map&attributes(attributes)
     .container
@@ -10,3 +11,7 @@ mixin ya-map(data)
         p!= text
       .ya-map__inner
         .ya-map__map(data-map=id, data-center=center, data-zoom=zoom, data-markers-url=markers)
+        .ya-map__message
+          p Зажмите ctrl и крутите колесо прокрутки мышки, что бы приблизить карту
+      if withFilter
+        +map-filter(filters)
