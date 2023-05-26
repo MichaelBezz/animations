@@ -9,8 +9,9 @@ export const initIntroAnimations = () => {
   }
 
   const isShown = animateIntro.classList.contains('is-shown');
+  const tween = gsap.to(animateCard, {opacity: 1, scale: 1, delay: 0.35, stagger: 0.05});
 
   if (isShown) {
-    gsap.to(animateCard, {opacity: 1, scale: 1, delay: 0.35, stagger: 0.05});
+    tween.repeat();
   }
 };
