@@ -2657,6 +2657,12 @@ button,
   width: 100px;
   height: 100px;
 }
+.placemark-balloon__image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 .placemark-balloon__wrap {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2783,6 +2789,50 @@ button,
   -webkit-transform: scale(1.15);
       -ms-transform: scale(1.15);
           transform: scale(1.15);
+}
+
+.cluster-balloon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.cluster-balloon__wrap {
+  padding: 10px;
+}
+.cluster-balloon__head {
+  margin: 0 0 10px;
+  font-size: 10px;
+  line-height: 1.4;
+  text-align: right;
+  color: #aaa5a0;
+}
+.cluster-balloon__title {
+  margin: 0 0 5px;
+  font-size: 14px;
+  line-height: 1.2857142857;
+  font-weight: 600;
+}
+.cluster-balloon__text {
+  margin: 0;
+  font-size: 10px;
+  line-height: 1.4;
+}
+.cluster-balloon__image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.cluster-balloon__image img {
+  width: 100%;
+  height: 80px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 /* @mixin hover-focus {

@@ -1,0 +1,41 @@
+.cluster-balloon {
+  display: flex;
+  flex-direction: column;
+
+  &__wrap {
+    padding: 10px;
+  }
+
+  &__head {
+    margin: 0 0 10px;
+    font-size: 10px;
+    line-height: calc(14 / 10);
+    text-align: right;
+    color: $color-cloudy;
+  }
+
+  &__title {
+    margin: 0 0 5px;
+    font-size: 14px;
+    line-height: calc(18 / 14);
+    font-weight: 600;
+  }
+
+  &__text {
+    margin: 0;
+    font-size: 10px;
+    line-height: calc(14 / 10);
+  }
+
+  &__image {
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 80px;
+      object-fit: cover;
+    }
+  }
+}
