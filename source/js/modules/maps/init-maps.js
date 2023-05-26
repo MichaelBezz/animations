@@ -1,6 +1,7 @@
 import {initMap1} from './map-1';
 import {initMap2} from './map-2';
 import {initMap3} from './map-3';
+import {initMap4} from './map-4';
 
 const initDefaultMap = (mapBlock) => {
   window.ymaps.ready(() => {
@@ -20,6 +21,9 @@ const initDefaultMap = (mapBlock) => {
 
 const initSetupMap = (mapId, mapBlock) => {
   switch (mapId) {
+    case 'map-4':
+      initMap4(mapBlock);
+      break;
     case 'map-3':
       initMap3(mapBlock);
       break;
