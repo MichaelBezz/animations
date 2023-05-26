@@ -1,5 +1,5 @@
 mixin navigation(navigationLinks, currentUrl)
-  nav.navigation(data-fix-block)&attributes(attributes)
+  nav.navigation&attributes(attributes)
     .container
       .navigation__wrapper
         ul.navigation__list
@@ -7,7 +7,7 @@ mixin navigation(navigationLinks, currentUrl)
             - const activeState = currentUrl === link.href
             li.navigation__item
               if(activeState)
-                span.link.link--big.link--white.navigation__link.is-active=link.text
+                span(data-menu="link").link.link--big.link--white.navigation__link.is-active=link.text
               else
-                +link({href: link.href}).link--big.link--white.navigation__link
+                +link({href: link.href})(data-menu="link").link--big.link--white.navigation__link
                   span=link.text

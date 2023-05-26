@@ -2018,33 +2018,6 @@ button,
           clip-path: polygon(0 0, 100% 0, 100% 100%, 0 110%);
   pointer-events: all;
 }
-.navigation.is-active .navigation__item:first-child .navigation__link {
-  -webkit-transition-delay: 0.33s;
-       -o-transition-delay: 0.33s;
-          transition-delay: 0.33s;
-}
-.navigation.is-active .navigation__item:nth-child(2) .navigation__link {
-  -webkit-transition-delay: 0.41s;
-       -o-transition-delay: 0.41s;
-          transition-delay: 0.41s;
-}
-.navigation.is-active .navigation__item:nth-child(3) .navigation__link {
-  -webkit-transition-delay: 0.49s;
-       -o-transition-delay: 0.49s;
-          transition-delay: 0.49s;
-}
-.navigation.is-active .navigation__item:nth-child(4) .navigation__link {
-  -webkit-transition-delay: 0.57s;
-       -o-transition-delay: 0.57s;
-          transition-delay: 0.57s;
-}
-.navigation.is-active .navigation__item .navigation__link {
-  -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
-  -webkit-transition-delay: 0.65s;
-       -o-transition-delay: 0.65s;
-          transition-delay: 0.65s;
-}
 .navigation .container {
   height: 100%;
 }
@@ -2080,13 +2053,6 @@ button,
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  -webkit-transform: translate3d(0, 110%, 0);
-          transform: translate3d(0, 110%, 0);
-  -webkit-transition: -webkit-transform 0.4s ease;
-  transition: -webkit-transform 0.4s ease;
-  -o-transition: transform 0.4s ease;
-  transition: transform 0.4s ease;
-  transition: transform 0.4s ease, -webkit-transform 0.4s ease;
 }
 .navigation__link span {
   display: block;
@@ -2100,17 +2066,11 @@ button,
   .navigation__link:hover:not(.focus-visible):not(.is-active) span {
     -webkit-transform: translate3d(30px, 0, 0);
             transform: translate3d(30px, 0, 0);
-    -webkit-transition-delay: 0s;
-         -o-transition-delay: 0s;
-            transition-delay: 0s;
   }
 }
 .navigation__link.focus-visible:focus:not(.is-active) span {
   -webkit-transform: translate3d(30px, 0, 0);
           transform: translate3d(30px, 0, 0);
-  -webkit-transition-delay: 0s;
-       -o-transition-delay: 0s;
-          transition-delay: 0s;
 }
 
 .intro {
