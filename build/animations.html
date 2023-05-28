@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <title>Список страниц</title>
+    <title>Анимации</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -62,64 +62,218 @@
 </g></symbol></svg>
     </div>
     <div class="wrapper">
-      <style>
-        .container {
-          padding-top: 50px;
-          padding-bottom: 50px;
-        }
-        
-        h1 {
-          font-size: 24px;
-          line-height: 28px;
-        }
-        
-        a {
-          color: rgb(10, 10, 175);
-        }
-        
-        li {
-          font-size: 18px;
-          line-height: 22px;
-          margin-bottom: 7px;
-        }
-        
-        img {
-          width: 100%;
-          max-width: 300px;
-          height: auto;
-          display: block;
-          margin-bottom: 40px;
-        }
-        
-        @media (max-width: 768px) {
-          .container {
-            padding-top: 20px;
-            padding-bottom: 20px;
-          }
-        
-          ol {
-            padding-left: 20px;
-          }
-        
-          ol li {
-            margin-bottom: 15px;
-          }
-        }
-        
-      </style>
+      <header class="header" data-fix-block>
+        <div class="container">
+          <div class="logo header__logo"><a class="link" href="index.html" aria-label="Переход на главную.">
+              <svg width="362" height="67" aria-hidden="true">
+                <use xlink:href="#logo"></use>
+              </svg></a>
+          </div>
+          <button class="button button--toggle header__toggle" type="button" aria-label="Переключатель отображения меню." aria-pressed="false" data-menu="toggle">
+          </button>
+        </div>
+        <nav class="navigation header__navigation" data-menu="navigation" data-fix-block>
+          <div class="container">
+            <div class="navigation__wrapper">
+              <ul class="navigation__list">
+                <li class="navigation__item"><a class="link link--big link--white navigation__link" href="index.html" data-menu="link"><span>Анимации</span></a>
+                </li>
+                <li class="navigation__item"><a class="link link--big link--white navigation__link" href="map-1.html" data-menu="link"><span>Карта 1</span></a>
+                </li>
+                <li class="navigation__item"><a class="link link--big link--white navigation__link" href="map-2.html" data-menu="link"><span>Карта 2</span></a>
+                </li>
+                <li class="navigation__item"><a class="link link--big link--white navigation__link" href="map-3.html" data-menu="link"><span>Карта 3</span></a>
+                </li>
+                <li class="navigation__item"><a class="link link--big link--white navigation__link" href="map-4.html" data-menu="link"><span>Карта 4</span></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
       <main>
-        <div class="container"><img src="https://via.placeholder.com/300x150" width="300" alt="Логотип проекта">
-          <h1>Список страниц</h1>
-          <ol>
-            <li><a href="animations.html">Анимации — animations.html</a></li>
-            <li><a href="map-1.html">Карта - 1 — map-1.html</a></li>
-            <li><a href="map-2.html">Карта - 2 — map-2.html</a></li>
-            <li><a href="map-3.html">Карта - 3 — map-3.html</a></li>
-            <li><a href="map-4.html">Карта - 4 — map-4.html</a></li>
-            <li><a href="ui-kit.html">UI-kit — ui-kit.html</a></li>
-          </ol>
+        <section class="intro" data-animate="intro" data-section-animation data-start="top top" data-end="bottom top">
+          <div class="intro__sticky">
+            <div class="container" data-animation="scale: 0.75, opacity: 0.5, rotateX: 5deg, y: -10vh" data-animation-direction="to">
+              <div class="intro__heading">
+                <h1 class="title title--h1 intro__title" data-splitting>Задачки <br> на прокачку</h1>
+                <p class="intro__description" data-splitting>Задачи на&nbsp;интерфейсную логику, <br> которые часто встречаются <br> на&nbsp;реальных проектах</p>
+              </div>
+              <div class="intro__cards"><a class="link card intro__card" href="#menu" data-move-to="#menu" data-card="intro">
+                  <h2 class="title title--h3 card__title">Меню</h2></a><a class="link card intro__card" href="#loader" data-move-to="#loader" data-card="intro">
+                  <h2 class="title title--h3 card__title">Лоадер</h2></a><a class="link card intro__card" href="#first-screen" data-move-to="#first-screen" data-card="intro">
+                  <h2 class="title title--h3 card__title">Сборка <br> первого экрана</h2></a><a class="link card intro__card" href="#show-on-scroll" data-move-to="#show-on-scroll" data-card="intro">
+                  <h2 class="title title--h3 card__title">Появление блоков</h2></a><a class="link card intro__card" href="#parallax" data-move-to="#parallax" data-card="intro">
+                  <h2 class="title title--h3 card__title">Параллакс</h2></a><a class="link card intro__card" href="#scroll-slider" data-move-to="#scroll-slider" data-card="intro">
+                  <h2 class="title title--h3 card__title">Слайдер <br> по скроллу</h2></a>
+              </div>
+            </div>
+            <div class="intro__background">
+              <video src="./video/background-wave.mp4" alt="waaaavee" autoplay="true" muted="true" loop playsinline></video>
+            </div>
+          </div>
+        </section>
+        <section class="section" id="menu">
+          <div class="container">
+            <div class="content-block">
+              <h2>Меню тз</h2>
+              <p><b>Анимация появления</b></p>
+              <p>При открытии: Сначала появляется меню, затем внутренний контент. Пункты внутри появляются с разной задержкой - эффект "лесенки"</p>
+              <p>При закрытии: Внутренний контент исчезает до закрытия меню, без задержки</p>
+              <p>Анимация меню на данном сайте реализована с помощью css (это база). Можете так же реализовать анимацию с помощью gsap</p>
+              <p><b>JS</b></p>
+              <p>Для блокировки скролла используется window.scrollLock</p>
+              <p>Должны быть реализованы функции или методы для открытия и закрытия меню, которые можно использовать в других модулях</p>
+            </div>
+          </div>
+        </section>
+        <section class="section" id="loader">
+          <div class="container">
+            <div class="content-block">
+              <h2>Лоадер тз</h2>
+              <p>Анимация лоадера произвольная, можно использовать css keyframes или gsap</p>
+              <p>После загрузки страницы мы всегда находимся вверху страницы (не должно быть видно скачка)</p>
+              <p>Скролл страницы заблокирован во время загрузки</p>
+            </div>
+          </div>
+        </section>
+        <section class="section" id="first-screen">
+          <div class="container">
+            <div class="content-block">
+              <h2>Сборка первого экрана тз</h2>
+              <p>Для анимации используйте неколько разных css свойств и небольшие задержки</p>
+              <p>
+                Для построчной или посимвольной анимации текста используйте
+                <a href="https://splitting.js.org" target="_blank" rel="nofollow noopener noreferrer">splitting.js</a>
+                (пример: интро этого сайта)
+              </p>
+            </div>
+          </div>
+        </section>
+        <section class="section" id="show-on-scroll">
+          <div class="container">
+            <div class="content-block">
+              <h2>Появление блоков</h2>
+              <p>доскролили и вжух!</p>
+              <p>Можно делать через классы и высчитывать по скроллу getBoundingClientRect каждого блока, но гораздо проще использовать ScrollTrigger.batch()</p>
+              <div class="section__cards">
+                <div data-animate="fade">
+                  <div class="card card--dark card--centered" data-animate-item>
+                    <p class="title title--h3">fade</p>
+                  </div>
+                </div>
+                <div data-animate="fade">
+                  <div class="card card--dark card--centered" data-animate-item>
+                    <p class="title title--h3">fade</p>
+                  </div>
+                </div>
+                <div data-animate="fadeIn">
+                  <div class="card card--dark card--centered" data-animate-item>
+                    <p class="title title--h3">fade-in</p>
+                  </div>
+                </div>
+                <div data-animate="fadeIn">
+                  <div class="card card--dark card--centered" data-animate-item>
+                    <p class="title title--h3">fade-in</p>
+                  </div>
+                </div>
+                <div data-animate="fadeScale">
+                  <div class="card card--dark card--centered" data-animate-item>
+                    <p class="title title--h3">fade-scale</p>
+                  </div>
+                </div>
+                <div data-animate="fadeScale">
+                  <div class="card card--dark card--centered" data-animate-item>
+                    <p class="title title--h3">fade-scale</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section" id="parallax">
+          <div class="container">
+            <div class="content-block">
+              <h2>Параллакс по скроллу</h2>
+              <p>Эффекты, которые постоянно срабатывают по скроллу <br> Скроллим скроллим и вжух вжух вжух!</p>
+              <div class="section__cards">
+                <div data-parallax="fadeScale">
+                  <div class="card card--dark card--centered" data-parallax-item>
+                    <p class="title title--h3">fade-scale</p>
+                  </div>
+                </div>
+                <div data-parallax="fadeScale">
+                  <div class="card card--dark card--centered" data-parallax-item>
+                    <p class="title title--h3">fade-scale</p>
+                  </div>
+                </div>
+                <div data-parallax="transformY">
+                  <div class="card card--dark card--centered" data-parallax-item>
+                    <p class="title title--h3">transform y</p>
+                  </div>
+                </div>
+                <div data-parallax="transformY">
+                  <div class="card card--dark card--centered" data-parallax-item>
+                    <p class="title title--h3">transform y</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="scroll-slider" data-scroll-slider="parent">
+          <section class="scroll-slider__sticky" id="scroll-slider" data-scroll-slider="sticky">
+            <div class="scroll-slide" data-scroll-slider="slide">
+              <div class="container">
+                <div class="content-block content-block--centered">
+                  <h2>Scroll Slider</h2>
+                  <p>переключение полноэкранных слайдов по скроллу</p>
+                </div>
+              </div>
+              <div class="scroll-slide__bg" style="background-image: url(img/svg/architect-bg.svg)"></div>
+            </div>
+            <div class="scroll-slide" data-scroll-slider="slide">
+              <div class="container">
+                <div class="content-block content-block--centered">
+                  <h2>position: sticky;</h2>
+                  <p>Просто стики. Не нужно мучаться с position: fixed; или pin: true, <br> (т.к. баги на тач неисправимы)</p>
+                </div>
+              </div>
+              <div class="scroll-slide__bg" style="background-image: url(img/svg/squares-bg.svg)"></div>
+            </div>
+            <div class="scroll-slide" data-scroll-slider="slide">
+              <div class="container">
+                <div class="content-block content-block--centered">
+                  <h2>gsap scrollTrigger</h2>
+                  <p>без getBoundingClientRect <br> ScrollTrigger делает всю рутину за нас</p>
+                </div>
+              </div>
+              <div class="scroll-slide__bg" style="background-image: url(img/svg/plus-bg.svg)"></div>
+            </div>
+            <div class="scroll-slide" data-scroll-slider="slide">
+              <div class="container">
+                <div class="content-block content-block--centered">
+                  <h2>ios friendly???</h2>
+                  <p>не забывайте добавлять вокруг transform: translate3d(0, 0, 0);</p>
+                </div>
+              </div>
+              <div class="scroll-slide__bg" style="background-image: url(img/svg/graph-paper-bg.svg)"></div>
+            </div>
+          </section>
         </div>
       </main>
+      <div class="loader" data-loader="container">
+        <div class="container">
+          <div class="loader__box">
+            <div class="loader__box-wrapper" data-loader="box">
+              <div class="loader__box-item"></div>
+              <div class="loader__box-item"></div>
+              <div class="loader__box-item"></div>
+              <div class="loader__box-item"></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="https://api-maps.yandex.ru/2.1/?apikey=2b0064a2-3442-4043-943f-7a8b7b3f838e&amp;lang=ru_RU"></script>
     <script src="js/vendor.min.js"></script>
