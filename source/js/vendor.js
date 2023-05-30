@@ -6,7 +6,4 @@ import {gsap} from './vendor/gsap/gsap.min.js';
 import {ScrollTrigger} from './vendor/gsap/scroll-trigger.min.js';
 
 gsap.registerPlugin(ScrollTrigger);
-
-const splitting = new Splitting({
-  by: 'lines',
-});
+(() => new Splitting({by: 'lines'}))();

@@ -7,7 +7,7 @@ import './batch-blocks';
 
 export const initAnimationModules = () => {
   const sliderContainer = document.querySelector('[data-scroll-slider="parent"]');
-  const scrollSlider = new ScrollSlider(sliderContainer);
+  (() => new ScrollSlider(sliderContainer))();
   generateTimeline();
   initParallaxComponents();
   initScrollTo();

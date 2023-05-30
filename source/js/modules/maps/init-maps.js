@@ -5,7 +5,7 @@ import {initMap4} from './map-4';
 
 const initDefaultMap = (mapBlock) => {
   window.ymaps.ready(() => {
-    const myMap = new window.ymaps.Map(mapBlock,
+    (() => new window.ymaps.Map(mapBlock,
         {
           center: [55.755819, 37.617644],
           zoom: 15,
@@ -15,7 +15,7 @@ const initDefaultMap = (mapBlock) => {
           suppressMapOpenBlock: true,
           searchControlProvider: 'yandex#search',
         }
-    );
+    ))();
   });
 };
 

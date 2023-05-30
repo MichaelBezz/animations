@@ -8,8 +8,10 @@
   width: 100%;
   min-height: 100vh;
   max-height: 100vh;
+  /* stylelint-disable declaration-block-no-duplicate-properties */
   min-height: calc(100*var(--vh, 1vh));
   max-height: calc(100*var(--vh, 1vh));
+  /* stylelint-enable declaration-block-no-duplicate-properties */
   opacity: 0;
   pointer-events: none;
   transform: translate3d(0, 0, 0);
