@@ -14,10 +14,14 @@
 <br>
 
 ## Работа с Yandex MAP API
-* Кастомный пин на карте. Демонстрация: ["Работа с Yandex MAP API - 1".](https://michaelbezz.github.io/animations/map-1.html)
-* Создание кастомных пинов из json файла. Демонстрация: ["Работа с Yandex MAP API - 2".](https://michaelbezz.github.io/animations/map-2.html)
-* Фильтрация пинов на карте в зависимости от выбранного фильтра. Демонстрация: ["Работа с Yandex MAP API - 3".](https://michaelbezz.github.io/animations/map-3.html)
-* Кластеризация пинов, пины собираются в один кластер. Демонстрация: ["Работа с Yandex MAP API - 4".](https://michaelbezz.github.io/animations/map-4.html)
+* Кастомный пин на карте.\
+Демонстрация: ["Работа с Yandex MAP API - 1".](https://michaelbezz.github.io/animations/map-1.html)
+* Создание кастомных пинов из json файла.\
+Демонстрация: ["Работа с Yandex MAP API - 2".](https://michaelbezz.github.io/animations/map-2.html)
+* Фильтрация пинов на карте в зависимости от выбранного фильтра.\
+Демонстрация: ["Работа с Yandex MAP API - 3".](https://michaelbezz.github.io/animations/map-3.html)
+* Кластеризация пинов, пины собираются в один кластер.\
+Демонстрация: ["Работа с Yandex MAP API - 4".](https://michaelbezz.github.io/animations/map-4.html)
 
 <br>
 
